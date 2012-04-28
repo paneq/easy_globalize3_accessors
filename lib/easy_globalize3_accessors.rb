@@ -10,7 +10,6 @@ module EasyGlobalize3Accessors
     end
   end
 
-
   private
     
 
@@ -30,6 +29,7 @@ module EasyGlobalize3Accessors
     define_method :"#{attr_name}_#{locale}=" do |value|
       write_attribute(attr_name, value, :locale => locale)
     end
+    attr_accessible :"#{attr_name}_#{locale}"
   end
 
   def each_attribute_and_locale(options)
