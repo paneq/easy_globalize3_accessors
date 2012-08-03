@@ -7,7 +7,7 @@ module EasyGlobalize3Accessors
 
     each_attribute_and_locale(options) do |attr_name, locale|
       define_accessors(attr_name, locale)
-      define_accessible((attr_name, locale)
+      define_accessible(attr_name, locale)
     end
   end
 
