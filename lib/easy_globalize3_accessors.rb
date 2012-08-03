@@ -7,6 +7,7 @@ module EasyGlobalize3Accessors
 
     each_attribute_and_locale(options) do |attr_name, locale|
       define_accessors(attr_name, locale)
+      define_accessible((attr_name, locale)
     end
   end
 
@@ -18,6 +19,10 @@ module EasyGlobalize3Accessors
     define_getter(attr_name, locale)
     define_setter(attr_name, locale)
   end
+  
+  def define_accessible(attr_name, locale)
+      attr_accessible("#{attr_name}_#{locale}")
+    end
 
 
   def define_getter(attr_name, locale)
