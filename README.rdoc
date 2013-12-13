@@ -36,6 +36,13 @@ You can also get locales for class with "globalize_locales" method:
 You can also get modified attribute names - ideal to strong parameters usage - with "globalize_attribute_names" method:
   Product.globalize_attribute_names # => [:title_en, :title_pl]
 
+Example usage with strong parameters:
+  params.require(:product).permit(*Product.globalize_attribute_names)
+
+If you need none translatable attributes as well, you could do:
+  permitted = Product.globalize_attribute_names + [:position]
+  params.require(:product).permit(*permitted)
+
 
 == Always define accessors
 
