@@ -24,4 +24,5 @@ Gem::Specification.new do |s|
   s.files        = `git ls-files`.split("\n")
   s.executables  = `git ls-files`.split("\n").map{|f| f =~ /^bin\/(.*)/ ? $1 : nil}.compact
   s.require_path = 'lib'
+  s.post_install_message = "Development of easy_globalize3_accessors moved to https://github.com/globalize/globalize-accessors . Please upgrade."
 end
