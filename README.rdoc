@@ -1,1 +1,1 @@
-Development moved to https://github.com//globalize/globalize-accessors
+Development moved to https://github.com/globalize/globalize-accessors
